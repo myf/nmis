@@ -6,7 +6,7 @@
 
 {% block js %}
     <!--[if lt IE 9]>    
-        <script src="/static/lib/excanvas_r3/excanvas.js"></script>
+        <script src="static/lib/excanvas_r3/excanvas.js"></script>
         <script>
             // Initialize canvas elements with excanvas
             (function(){
@@ -21,7 +21,7 @@
             })();
         </script>
     <![endif]-->
-    <script src="/static/explore.js"></script>
+    <script src="static/explore.js"></script>
     <script>
         NMIS = {};
         NMIS.lgas = {}; // LGA lga_id mapping
@@ -125,7 +125,7 @@
         <div id="zone_nav">
             <% _.each(zones, function(zone, i){ %>
                 <div class="zone <% if (i == 5){ %>last<% } %>">
-                    <img src="/static/images/zones/<%= zone[0] %>.png">
+                    <img src="static/images/zones/<%= zone[0] %>.png">
                     <h2><%= zone[0] %></h2>
                     <div class="state">
                         <% _.each(zone[1], function(state){ %>

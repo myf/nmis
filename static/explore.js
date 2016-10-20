@@ -89,7 +89,7 @@ function view(viewObj, sector){
             $('#content').fadeTo(100, 0.5);
 
             // Fetch LGA data from network
-            var url = '/static/lgas/' + unique_lga + '.json';
+            var url = 'static/lgas/' + unique_lga + '.json';
             $.getJSON(url, function(lga){
                     NMIS.lgas[unique_lga] = lga;
                     setLGACache(lga);
@@ -357,13 +357,13 @@ MapView.get_facility_layer = function(facilities, indicator) {
         if (indicator) {
             if (fac[indicator] === true || 
                 fac[indicator] === false) {
-                icon_url = '/static/images/icons_f/' + 
+                icon_url = 'static/images/icons_f/' + 
                     fac[indicator] +'.png';
             } else {
-                icon_url = '/static/images/icons_f/undefined.png';
+                icon_url = 'static/images/icons_f/undefined.png';
             }
         } else {
-            icon_url = '/static/images/icons_f/normal_' + 
+            icon_url = 'static/images/icons_f/normal_' + 
                 fac.sector + '.png';
         }
         var lat_lng = [fac.latitude, fac.longitude];
