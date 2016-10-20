@@ -320,10 +320,10 @@ MapView.facility_map = function(lga, sector, indicator) {
         // Initialize Leaflet
         this.map = new L.Map(map_div);
         var tile_layer = new L.TileLayer(
-            'http://{s}.tiles.mapbox.com/v3/ossap-mdgs.inh7p9ok/{z}/{x}/{y}.png', {
-                subdomains: 'abc',
+            'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                subdomains: ['mt0'],
                 minZoom: 6,
-                maxZoom: 16
+                maxZoom: 20
             });
         tile_layer.addTo(this.map);
         this.resize();
